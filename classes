@@ -1,0 +1,59 @@
+/*
+// MES FONCTIONS
+
+       function arraySum(tab){
+        let sum = 0
+        for(let note of tab){
+        sum = sum + note
+        }
+        return sum
+        }
+
+// LES CLASSES
+class Student{
+    //static pour des objets ou fonctions propre a la classe
+    static moyenne = 10
+    ecole = 'Jules ferry'
+    // # pour definir des variables privees
+
+    constructor(firstname, lastname){
+
+        this.firstname = firstname
+        this.lastname = lastname
+    }
+
+    set notes(v){
+
+        if(Array.isArray(v)){
+            this._notes = v
+        } 
+        // on met _ au niveau de notes pour eviter un conflit entre le nom du setter et de la variable ca signifie aussi que c'est une variable a l'interieur de la classe qu'on souhaite pas reutiliser a l'exterieur de la classe
+    }
+
+    get name(){
+
+        return `${this.firstname} ${this.lastname}`
+    }
+    // un getter ne prend pas de parametre
+
+    canPass(){
+        return (arraySum(this._notes)/this._notes.length) >= Student.moyenne
+    }
+}
+class SuperStudent extends Student(){
+    get name (){
+        return 'super' + super.name // le mot cle super permet d'acceder a une methode de la classe parente
+    }
+    canPass(){
+        return true 
+    }
+}
+const john = new Student('John', 'Doe')
+const jane = new Student('Jane','MacDoe')
+jane.notes = [15,18,19]
+console.log(jane.name)
+console.log(jane.canPass())
+console.log(john)
+john.notes = [10,10,9]
+console.log(john.canPass())
+*/

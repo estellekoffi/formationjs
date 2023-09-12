@@ -1,0 +1,99 @@
+/*
+Pour les fonctions a utilisation globale
+        function canDrive(age, pays){
+            
+            if(
+                (age >= 18 && pays == 'FR') ||
+                (age >= 16 && pays == 'US')
+            ){
+                return true
+            }
+            return false
+        }
+        console.log(canDrive(15, 'US'))
+        
+
+        // Pour les fonction qu'on aimerait utiliser que dans une boucle etc
+         const canDrive = function(age, pays){
+            if(
+                (age >= 18 && pays === 'FR') ||
+                (age >= 16 && pays === 'US')
+            ){
+                return true
+            }
+            return false
+        }
+        console.log(canDrive(50, 'FR'))
+
+        //fonction avec le mot cle this
+
+         function maFonction(){
+        console.log(this)
+       }
+         
+        maFonction.call(5)
+
+        //this fait reference a l'objet dans lequel il se trouve
+
+          const person = {
+            firstname : 'John',
+            lastname : 'Doe',
+            fullname : function(){
+                console.log(`${this.firstname.toUpperCase()} ${this.lastname} `)
+            }
+        }
+        person.fullname()
+
+        // Les fonctions flechees: la valeur de this ne change pas et ne s'applique pas a un objet this fera toujours reference a window
+
+         const  maFonction = () => {
+        console.log(this)
+       }
+       maFonction.call(3)
+       // Avec les fonction fleche on peut abreger l'ecriture d'une fonction ex:
+
+       const somme = (a, b) => {
+        return a + b 
+       }
+       peut etre ecrit 
+       const somme = (a , b) => a + b
+
+       // les fonctions qui prennent en parametre une autre fonction. la fonction prise en parametre est appelle callback et nommee generalement cb
+
+         const isPair = function(a, cb){
+            if(a % 2 === 0){
+                cb(a)
+            }
+        }
+        isPair(6, function(nombre){
+            console.log(`le nombre ${nombre} est pair`)
+        })
+
+        //EXERCICE
+
+        function getRandomNumber(max){
+        return Math.floor(Math.random() * ( max +1))
+      }
+      const aleatoire = getRandomNumber(10)
+      console.log(aleatoire)
+
+      function isRight(n){
+        return aleatoire === n
+      }
+
+      function guess(){
+       const number = prompt('Entrez un nombre entre 0 & 10')*1 
+        return isRight(number)
+      }
+
+        
+        for (let i = 0; i < 3; i++){
+            if(guess()){
+                console.log('FELICITATIONS!!!!!!!!!!')
+                break;
+            }else if(i === 2){
+                console.log('Vous avez perdu')
+            }
+        }
+
+*/

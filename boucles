@@ -1,0 +1,76 @@
+ /*boucle while
+        let i = 0
+        while(i<10){
+            console.log(i)
+            i++ 
+        }
+/* boucle for
+
+        boucle for normal
+
+        for(let i = 0; i<10; i++){
+            console.log(i)
+        }*/
+
+
+        /* boucle for in
+        
+        pour les tableaux et les objets 
+          un peu comme le foreach en php ca agit sur chaque element
+          du coup si c'est un tableau on peut recuperer l'index et ou la valeur 
+          et si c'est un objet on peut egalement recuperer la cle et ou la valeur
+
+        const objetPerson = {
+            nom : 'Estelle',
+            prenom : 'Aya',
+            age: 14
+
+        }
+        const notes = [12, 15, 20, 18]
+        for(let i in notes){
+            console.log(notes[i])
+        }
+       for(let key in objetPerson){
+        console.log(key +' : ' + objetPerson[key])                                                                                                                                                                                                                                                                                                                    
+       }
+      
+        /* boucle for of 
+        
+        si je suis interessee que par la valeur et non par l'index ou la cle il est preferable d'utiliser cette boucle
+        seulement sur les choses iterables commes les tableaux  et les chaines de caractere ca ne fonctionne pas pour les objets
+        const notes = [12, 15, 20, 18]
+        const mot = "Bonjour"
+        for(let letter of mot){
+            console.log(letter)
+        }
+        */  
+            /*const chiffre = prompt('Entrez un chiffre compris entre 0 et 10') 
+    
+    while(chiffre < 0 && chiffre > 10){
+        
+    console.log('Votre chriffre n\'est pas compris entre 0 & 10')      
+        
+    }  
+    console.log('votre chiffre est ' + chiffre)
+        for(let i = 0; i < chiffre; i++)
+        {
+            console.log(i)
+        }   
+      */                                                                     
+    /*    let chiffre = prompt('Entrez un chiffre compris entre 0 et 10') 
+    
+    if(chiffre < 0 && chiffre > 10){
+        
+    console.log('Votre chriffre n\'est pas compris entre 0 & 10')      
+        
+    }  else{
+
+        console.log('votre chiffre est ' + chiffre)
+        while(chiffre >= 0)
+        {
+            console.log(chiffre)
+            chiffre--
+           
+        }  
+    }                                                                        
+*/

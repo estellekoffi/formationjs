@@ -1,0 +1,26 @@
+//LES FONCTIONS USUELLES
+/*
+SUR LES TABLEAUX
+
+ALT()
+tab.alt(-1) pour lire un tableau dans le sens inverse
+FILTER()
+tab.filter(fonction)
+filter prend en parametre une fonction. par exemple si je veux recuperer les notes sup a 10 dans un tableau de notes alors
+note.filter((notes) => note >= 10)
+FIND()
+tab.find(condition)
+tab.find(note > 10) cela recupere le premier element du tableau qui respecte la condition
+findIndex() findLastIndex() 
+
+FOREACH()
+ARRAY.FROM()
+INCLUDE() verifier si un element est inclut dans un tableau
+MAP() 
+pour alterer un tableau c'est une fonction qui permet de transformer les donner d'un tableau selon nos besoins
+tab.map(x = x*2) ceci multiplie tous les elements du tableau par 2
+   
+SUR LES OBJETS
+
+ENTRY() KEY()
+*/

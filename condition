@@ -1,0 +1,48 @@
+
+/*
+
+conditions
+const pays = 'US'
+const age = 15
+const peutConduireFR = pays === 'FR' && age >= 18
+const peutConduireUS = pays === 'US' && age >= 16
+if(peutConduireFR || peutConduireUS){
+ console.log("vous avez le droit de conduire")
+}else{
+ console.log('vous n\'avez pas le droit de conduire')
+}
+
+EXERCICE 1
+
+        const year = 2022
+        const annee = prompt('quel est votre annee de naissance ? ')
+        const age = year - annee
+      if(age <= 13){
+        console.log('lilo & stitch')
+      }
+       else if( age < 18){
+        console.log('Matrix')
+       }else{
+        console.log('Evil dead')
+       }
+    
+EXERCICE 2
+
+        const a = prompt('entrez un premier nombre ')
+        const b = prompt('entrez  un deuxieme nombre ')
+        const result = a * b
+        let signe
+        if(isNaN(result)){
+            console.log('Solution impossible entrez des nombres !')
+        }else{
+            if(result < 0){
+            signe = 'negatif'
+        }else if(result > 0){
+            signe = 'positif'
+
+        }else{
+            signe = 'nul'
+        }
+        console.log(`${a} * ${b} = ${result} est ${signe}`)
+        }
+*/

@@ -1,0 +1,39 @@
+  /* LES VARIABLES
+  
+  VARIABLES SIMPLES
+
+       const a = `salut`
+        const b =`les gens`
+        const c = undefined
+TABLEAUX
+        const tab = [
+            'bonjour',
+             14,
+             'oui',
+             15,
+             'VISA',
+             [12,20,16,18]
+            ]
+        
+  OBJETS
+        const person = {
+            firstname: 'Shina',
+            lastname: 'OWAGOKE',
+            age: 22,
+            fav: [
+                'mac',
+                'iphone',
+                13,
+                'airpod'
+
+            ],
+            vie: {
+                bac: 'D',
+                master: 'GI',
+                metier: 'Architecte logiciel',
+                enfant: 3,
+                wife: 'Esther'
+            }
+            LET pour les variables qui peuvent changer de valeur
+        }
+        */

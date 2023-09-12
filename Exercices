@@ -1,0 +1,121 @@
+/* 
+EXERCICE 1 PALINDROME
+function isPalindrome(){
+      mot = prompt('Entrez un mot')
+      mot = mot.toLowerCase()
+      const tabMot = mot.split('')
+      // console.log(tabMot)
+      const motRev = tabMot.reverse()
+      // console.log('motRev:',motRev)
+      const motJoin = motRev.join('')
+      // console.log(motJoin)
+      if(mot === motJoin){
+        console.log(`${mot} est un palindrome`)
+      }else{
+        console.log(`${mot} n'est un palindrome`)
+      }
+}
+isPalindrome()
+
+
+      //EXERCICE 2 CALCUL DE MOYENNE
+
+const students = [
+  {
+    name: 'John',
+    notes: [1, 20, 18, 19, 12]
+
+  },
+  {
+    name: 'Jane',
+    notes: [17, 18, 20, 13, 15]
+
+  },
+  {
+    name: 'Sophie',
+    notes: [17, 12, 14, 15, 13]
+
+  },
+  {
+    name: 'Marc',
+    notes: [2, 3, 5, 8, 9]
+
+  },
+  {
+    name: 'Manon',
+    notes: [18, 17, 18, 19, 12]
+
+  }
+]
+//ETAPE 1 CALCUL DES MOYENNES
+//documentation https://www.freecodecamp.org
+
+function arraySum(tab){
+  let sum = 0
+  for(let note of tab){
+  sum = sum + note
+  }
+  return sum
+}
+
+let moyStudent = []
+
+ for(let i = 0; i < students.length; i++){
+
+  const moy = arraySum(students[i].notes)/students.length
+
+  //concat pour la concatenation de tableaux
+
+  moyStudent = moyStudent.concat([
+  {
+     name: students[i].name,
+     notes: students[i].notes,
+     moyenne: moy
+  }
+  ])
+ }
+ console.log('calcul des moyenne')
+ console.log(moyStudent)
+
+ //Petite parenthese j'ai ecrit tout le code au dessus pour ensuite comprendre par la correctio que je pouvais faire ceci
+
+ /*
+ for(let student of students){
+  student.moyenne = (arraySum(student.notes))/student.length
+ }
+ const moyStudent = students //cette ligne c'etait pour ne pas avoir a modifier tous les moyStudent du bas LMAO... au moins j'ai apris
+
+ console.log('calcul des moyenne')
+ console.log(moyStudent)
+*/
+ //ETAPE 2 CLASSEMENT TRI PAR  SELECTION
+ //Selon la correction on peut apparemment utiliser une fonction sort() (je dois me documenter sur la fonction)
+
+/* for(let i = 0; i < moyStudent.length; i++){
+
+  for(let j = i+1; j< moyStudent.length; j++){
+    while(moyStudent[i].moyenne > moyStudent[j].moyenne){
+      j++
+    }
+    const c = moyStudent[i].moyenne
+    moyStudent[i].moyenne = moyStudent[j].moyenne
+    moyStudent[j].moyenne = c
+  }
+}
+console.log('Classemet des eleves')
+console.log(moyStudent)
+
+//ETAPE 3 TOP 3
+
+console.log('Les trois(3) meilleurs')
+console.log(moyStudent.slice(0,3))
+
+//afficher la note max et la note min de chaque etudiant
+
+for(let student of moyStudent){
+  student.noteMax = Math.max(...student.notes)
+  student.noteMin = Math.min(...student.notes)
+}
+ console.log(moyStudent)
+
+*/
