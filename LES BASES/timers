@@ -1,0 +1,62 @@
+   /* 
+
+   function wait(duration){
+        const t = Date.now()
+        while(Date.now() - t < duration){
+
+        }
+      }
+      console.log('bonjour')
+     // wait(1000)
+     setTimeout(() => {
+      console.log('les gens')
+     },1000)
+      console.log('bye')
+
+      il vaut mieux utiliser le fonction setTimeOut pour afficher les delays parce que 
+      la premiere technique avec la fonction wait bloque tout le reste du script en attendant que le delai passe
+
+      EXERCICE
+
+      
+
+      /*afficher le meme mot 5 fois et s'arreter
+
+      let i = 0
+      const t = setInterval(
+        function afficher(){
+          i++
+          console.log('coucou')
+        if(i >= 5){
+          clearInterval(t)
+          }
+        },
+        1000
+      )
+
+      decompte
+        function decompte(n){
+          const t = setInterval(() => {
+            n--
+            console.log(n)
+            if(n === 0){
+              clearInterval(t)
+            }
+          },1000
+
+          )
+
+        }
+       
+       //autre methode decompte
+
+       function decompte(n){
+        setTimeout(() =>{
+          if(n >= 0){
+          console.log(n)
+          decompte(n-1)
+        }
+        },1000)
+       }
+       decompte(5)
+        */

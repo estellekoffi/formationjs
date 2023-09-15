@@ -1,0 +1,47 @@
+
+   /* JE DOIS REGARDER ENCORE LA VIDEO POUR 
+   COMPRENDRE LA RESOLUTION AVEC UN TABLEAU ]
+
+    const DAYS = 'days'
+    const MONTHS = 'months';
+    const YEARS = 'years'
+
+    function addDays(date, days){
+        const newDate = new Date(date.getTime())
+        newDate.setDate(newDate.getDate() + days);
+     return newDate;
+    }
+    function addMonths(date, months){
+        const newDate = new Date(date.getTime())
+        newDate.setMonth(newDate.getMonth() + months);
+     return newDate;
+    }
+
+    function addYears(date, years){
+        const newDate = new Date(date.getTime())
+        newDate.setFullYear(years);
+     return newDate;
+    }
+
+   function addInterval(date,n,unit){
+    switch(unit){
+        case DAYS:
+            return addDays(date,n);
+        break;
+        case MONTHS:
+            return addMonths(date,n)
+        break;
+        case YEARS:
+            return addYears(date,n)
+        break;
+        default:
+        console.log('votre choix n\'est pas traite' )
+        break;
+        }
+    }
+    
+    const today = new Date();
+    const tomorrow = addInterval(today, 2, MONTHS);
+    console.log(today);
+    console.log(tomorrow);
+    */

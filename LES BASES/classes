@@ -1,4 +1,6 @@
 /*
+pour toutes les fonction ecrites dans une classe on a pas besoin d';ajouter le mot cle function
+on peut ecrire directement le nom de la fonction  
 // MES FONCTIONS
 
        function arraySum(tab){
@@ -40,6 +42,7 @@ class Student{
         return (arraySum(this._notes)/this._notes.length) >= Student.moyenne
     }
 }
+Dans les classes qui heritent d'une classe parente on peut acceder aux proprietes et methodes de la classe parente grace aux mots cles 'super'
 class SuperStudent extends Student(){
     get name (){
         return 'super' + super.name // le mot cle super permet d'acceder a une methode de la classe parente
@@ -56,4 +59,47 @@ console.log(jane.canPass())
 console.log(john)
 john.notes = [10,10,9]
 console.log(john.canPass())
+
+deuxieme approche
+
+
+    function sum(array){
+          let sum = 0
+          for(let i=0; i<array.length; i++){
+            sum = sum + array[i]
+          }
+          return sum;
+      }
+      function moyenne(array){
+          return sum(array)/array.length
+      }
+
+      class Student{
+
+       constructor(firstname, lastname, age)
+       {
+        this.firstname = firstname
+        this.lastname = lastname
+        this.age = age      
+      }
+      set notes(v){
+        if(Array.isArray(v)){
+        this._notes = v
+      }
+    }
+      //les getters ne prennent pas d'arguments
+
+      get fullname () {
+        return `${this.firstname} ${this.lastname}`
+      }
+
+      canPass(){
+        return moyenne(this._notes) >= 10
+      }
+      
+
+      }
+     const estelle = new Student('Estelle','OWAGOKE', 25)
+     const nathan = new Student('Nataniel', 'OWAGOKE', 22)
+     console.log(nathan.fullname)
 */

@@ -1,0 +1,26 @@
+   /* function wait(duration){
+        return new Promise((resolve,reject) => {
+          setTimeout( () => {
+            resolve(duration)
+          },duration)
+        })
+      }
+      function waitAndFail(duration) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() =>{
+            reject(duration)
+          },duration)
+        })
+      }
+      wait(2000).then(console.log)
+
+      JE DOIS REGARDER LES METHODES SUR LES PROMESSES(Promise)
+      const p = new Promise( (resolve, reject)=>{
+        reject(4)
+      }
+       )
+       p.then((n)=>{
+        console.log(`le nombre ${n}`)
+       }).catch((e) => {
+        console.log(`echec ${e}`)
+       })*/

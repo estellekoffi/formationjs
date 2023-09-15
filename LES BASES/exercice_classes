@@ -20,4 +20,35 @@ const rec = new Rectangle(30,-8)
 console.log(rec.perimeter)
 console.log(rec.isValid)
 const car = new Square(5)
-console.log(car.perimeter)*/
+console.log(car.perimeter)
+
+PAS TERMINE
+
+        class Book{
+
+          constructor(title,pages){
+            this.title = title 
+            this.pages =pages
+          }
+          get page(){
+            for(let page = 1; page <= 200; page++){
+              return page
+            }
+
+          }
+          set nextPage(p){
+            while(p < this.pages){
+            return p + 1
+          }
+          }
+
+          set close(p){
+            this.p = p
+        }
+        }
+
+
+
+
+
+*/
