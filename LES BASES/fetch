@@ -6,4 +6,18 @@
      //jsonplaceholder
      //.then(r => console.log(r))
      //.then pour dire lorsque tu as fini de charger affiche moi les information sur r
+
+         async function fetchUsers(){
+        const r = await fetch('https://jsonplaceholder.typicode.com/users?_limit=5',{ 
+            method: 'GET',
+            headers:{
+            "Accept": "application/json",
+             }
+        })
+        if(r.ok === true){
+            return r.json();
+        }
+        throw new error('impossible de contacter le site')
+        }
+        fetchUsers().then(users => console.log(users))
 */

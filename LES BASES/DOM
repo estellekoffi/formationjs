@@ -1,0 +1,132 @@
+/*
+
+<!--<div id="hello">
+    Coucou les gens biens
+</div>
+<ul>
+     li*3>lorem et j'ai tape entrez pour avoir les 3 lignes cool non  
+    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, eius laborum amet necessitatibus qui perspiciatis magnam, pariatur quos perferendis cumque molestiae quis sunt ex iure, sit provident in? Modi, odit.</li>
+    <li>Odio rem quaerat tenetur animi, obcaecati beatae iure molestias optio nam in mollitia voluptate eum officia fugiat ipsam quae maxime itaque similique explicabo hic eos voluptates sunt delectus deleniti. Impedit?</li>
+    <li>Pariatur culpa, molestias quisquam quod dolores autem fugiat facere excepturi aliquam perspiciatis numquam iusto dicta, at veritatis ipsa laborum quia nobis. Obcaecati sint nesciunt labore suscipit tempore adipisci magnam et?</li>
+</ul>
+const ul = document.querySelector('ul')
+console.log(
+    ul.setAttribute('hidden','hidden')
+    )
+    
+    les selecteurs dans la methodes querySelector sont les elements qui sont pris en parametre par la methode
+    si je mets un 'ul li:first-child' c'est pour dire de selectionner le premier li entre les balises ul
+     nodeName est une methode qui permet de voir le nom du noeud sur lequel nous sommes
+     innerHTML permet de voir la structure HTML
+     innerText pour avoir le texte sans les balises
+     textContent affiche egale le texte mais egalement les textes cache par la propriete hidden
+     setAttribute pour modifier le comportement d'un element
+     hidden est une propriete ou attribut qui peut prendre la valeur hidden si on souhaite la faire disparaitre
+     removeAttribute pour supprimer un attribut
+     getAttribut pour recuper un attribut
+     classList est un objet sur les classes classList.remove classList.add classList.toggle
+     classList.toggle('red') => permet d'ajouter l'attribut s'il n'existe pas ou le retirer s'il existe dans une balise
+     getComputedStyle
+     Ajouter un element a la page 
+     const newLi = document.createElement('li') => on cree on nouvel element
+     newLi.innerHTML = 'Coucou' => on modifie la structure html en ajoutant
+     document.querySelector('ul').appendChild(newLi) => on specifie a quel niveau ajouter
+     ul.append(li) rajouter un li dans la balise ul il rajoute a la fin tandis que le prevent rajoute au debut
+     
+*/
+
+
+EXERCICE
+
+/**
+ * creer un element HTML representant un article
+ * @param {{title: string, body: string}} post 
+ * @return {HTMLelement}
+ 
+
+const article = document.createElement('article')
+
+function articleElement(tagName, content){
+    const element = document.createElement(tagName)
+    element.innerText = content
+    article.append(element)
+    return element
+}
+function createArticle(post){
+    articleElement('h2', post.title)
+    articleElement('p', post.body)
+    return article
+}
+
+async function main(){
+
+    const wrapper = document.querySelector('#lastPosts')
+    const loader = document.createElement('p')
+    loader.innerText = 'chargement...'
+    wrapper.append(loader)
+        try{
+            const data = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5',
+                {
+                    headers: {
+                        Accept: 'application/json'
+                    }
+                })
+            if(!data.ok ){
+                throw new Error('erreur serveur')
+            }
+            const posts = await data.json()
+            loader.remove()
+
+            for(let post of posts){
+                wrapper.append(createArticle(post))
+            }
+
+    }catch(e){
+        loader.innerText = 'impossible de charger les articles'
+        loader.style.color = 'red'
+            return
+    }
+   }
+
+main()
+
+
+
+
+
+
+
+
+
+CE QUE J'AI FAIT QUI N'ETAIT PAS JUSTE
+
+
+ async function fetchPosts(){
+    const data = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5',
+    {
+        method: 'GET',
+        headers: {
+            "Accept": 'application/json',
+        },
+    })
+    if(data.ok === true){
+        return data.json();
+    }
+    throw new ErrorEvent('impossible de contacter la page')
+}
+const rep = fetchPosts().then(post => post.json)
+    fetchPosts().then( post => {
+    const div = document.querySelector('div p')
+    div.remove()
+    const newArticle = document.createElement('article')
+     document.querySelector('div').appendChild(newArticle)
+    for(let key in rep){
+        const newH1 = document.createElement('h1')
+        newH1.innerHTML = rep['title']
+        document.querySelector('article').appendChild(newH1)
+        const newP = document.createElement('p')
+        newP.innerHTML = rep['body']
+        document.querySelector('h1').append(newP)
+    }
+})
+*/
