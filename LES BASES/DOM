@@ -31,8 +31,10 @@ console.log(
      const newLi = document.createElement('li') => on cree on nouvel element
      newLi.innerHTML = 'Coucou' => on modifie la structure html en ajoutant
      document.querySelector('ul').appendChild(newLi) => on specifie a quel niveau ajouter
-     ul.append(li) rajouter un li dans la balise ul il rajoute a la fin tandis que le prevent rajoute au debut
+     ul.append(li) rajouter un li dans la balise ul il rajoute a la fin tandis que le prepend rajoute au debut
      
+    div.setAttribute('class','alert alert-danger') pour ajouter un attribut a une balise 
+    ici on ajoute un attribut class qui prend la valeur alert alert-danger
 */
 
 

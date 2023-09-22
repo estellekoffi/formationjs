@@ -1,0 +1,60 @@
+const form = document.querySelector('form')
+form.addEventListener('s', (e)=>{
+   console.log(e.currentTarget)
+   e.preventDefault() // empeche le comportement par defaut de l'element
+   e.stopPropagation() // stopper la propagation
+})
+const button = document.querySelector('button')
+button.addEventListener('click', () =>
+   alert('bonjour')
+ )
+
+function onButtonClick(event){
+   console.log(this) //this jouera le meme role qu'un currentTarget donc si on veut que this face appel a l'objet global dans ce cas il faut utiliser une fonction flechee
+   console.log(event.currentTarget)
+}
+const btn = document.querySelectorAll('button').forEach(button=>{
+   button.addEventListener('click',onButtonClick)
+} )
+document.querySelector('form').addEventListener('submit',(e)=>{
+ 
+    const form = e.currentTarget 
+    const data = new FormData(form) // on instancie un nouvel objet formDat
+    const firstname = data.get('firstname')
+    if(firstname.length < 2){
+       e.preventDefault()
+    }
+})
+
+ /* document.querySelector('input').addEventListener('change',(e)=>{
+  console.log('change')
+ })
+ document.querySelector('input').addEventListener('input',(e)=>{
+    console.log('input', e.currentTarget.value) //pour avoir la valeur de la saisie dans le champ input
+   })
+
+  document.querySelector('input').addEventListener('keydown',(e)=>{
+   //console.log('keydown') pour avoir des informations sur la cle pressee (la touche du clavier)
+   console.log('keydown',e) // pour avoir sur la toucle grace a la propriete key 
+   il ya aussi keypress(a quel moment on a appuye sur la touche) et keyup (a quel moment on a lache la touche)
+
+
+document.addEventListener('keydown',(e)=>{
+   //si patr exemple je veux verifier si la touche ctrl +k a ete touche
+   if((e.ctrlKey === true) && (e.key === 'c')){
+      e.preventDefault()
+      console.log('copie demande')
+   }
+   
+})
+})
+pour les checkbox
+document.querySelectorAll('input').forEach(element =>{
+   element.addEventListener('change', (e)=>{
+      console.log(e.currentTarget.checked) //pour verifier si la case est cochee ou pas, on verifie si l'attribue checked qui est sur l'element est a true
+   })
+})
+*/
+
+
+

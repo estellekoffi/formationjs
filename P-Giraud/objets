@@ -1,0 +1,27 @@
+//creation d'un bojet litteral: une variable qui contient un objet
+
+let estelle = {
+    nom : ['Koffi', 'Aya'],
+    age : 24 ,
+    mail : 'estelle@gmail.com',
+
+    bonjour : function(){
+        alert(`bonjour je suis ${this.nom[0]}  ${this.nom[1]} j'ai ${this.age} ans`);
+    }
+
+}
+// pour acceder a une propriete d'un objet
+
+document.getElementById('p1').innerHTML = estelle.nom[0] +' ' + estelle.nom[1]
+
+/* on peut ajouter une nouvelle propriete a un objet en dehors de l'objet en faisant :
+
+estelle.taille = 171;
+
+ce code va ajouter une propriete taille de valeur egale 171 a l'objet estelle */
+
+//pour appeler la methode de l'objet 
+// estelle.bonjour()
+
+// on peut egalement acceder aux proprietes des objets en faisant comme si notre objet était un tableau associatif composés d’éléments dont les clefs sont les noms des propriétés et les valeurs sont les valeurs associées
+//estelle['nom'][0] pour acceder a la premiere valeur de la propriete nom

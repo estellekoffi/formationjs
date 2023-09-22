@@ -1,0 +1,25 @@
+// pour parcourir les tableaux on va utiliser la boucle for of et pour les objets la boucle for in
+//quelques methodes sur les tableaux
+/*La méthode push() va nous permettre d’ajouter des éléments en fin de tableau et va retourner la nouvelle taille du tableau. Nous allons passer les éléments à ajouter en argument.
+
+La méthode pop() va elle nous permettre de supprimer le dernier élément d’un tableau et va retourner l’élément supprimé
+ La méthode unshift() va nous permettre d’ajouter des éléments en début de tableau et va retourner la nouvelle taille du tableau. Nous allons passer les éléments à ajouter en argument.
+
+La méthode shift() va elle nous permettre de supprimer le premier élément d’un tableau et va retourner l’élément supprimé
+
+La méthode splice()
+
+Pour ajouter, supprimer ou remplacer des éléments dans un tableau, on peut également utiliser splice().
+
+L’avantage de cette méthode est qu’elle nous permet d’ajouter, de supprimer ou de remplacer des éléments n’importe où dans un tableau
+La méthode splice() va pouvoir prendre trois arguments : une position de départ à partir d’où commencer le changement, le nombre d’éléments à remplacer et finalement les éléments à ajouter au tableau.
+prenoms.splice(2, 0, 'Thomas', 'Manon')
+
+La méthode join() retourne une chaine de caractères créée en concaténant les différentes valeurs d’un tableau. Le séparateur utilisé par défaut sera la virgule mais nous allons également pouvoir passer le séparateur de notre choix en argument de join()
+document.getElementById('p1').innerHTML = prenoms.join(' - ');
+
+La méthode slice()
+
+La méthode slice() renvoie un tableau créé en découpant un tableau de départ.
+
+Cette méthode va prendre en premier argument facultatif la position de départ où doit commencer la découpe de notre tableau de départ. Si la position passée est un nombre négatif, alors le début de la découpe sera calculé à partir de la fin du tableau de départ. Si aucune position de départ n’est passée, la découpe commencera depuis le début du tableau de départ
