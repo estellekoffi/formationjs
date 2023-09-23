@@ -1,0 +1,9 @@
+/*il y a de superbes methodes sur l'objet windows comme :
+open() => trois parametre: 1 le lien/ 2 le nom de la fenetre /3 le redimentionnement 
+scrollTo() et scrollBy() pour le defilement sur une paragraphes
+alert() pour les alertes
+prompt() pour l'onglet de dialogue qui permet a l'utilisateur de rentrer quelque chose
+confirm() pour confirmer une action. Par exemple si je veux vraiment supprimer quelque chose ou quitter une paragraphe
+close() pour fermer une fenetre
+
+je n'ai pas encore bien compris l'objet Navigator je dois relire : https://www.pierre-giraud.com/javascript-apprendre-coder-cours/navigator-geolocation/
