@@ -1,0 +1,9 @@
+/*le parametre du reste pour creer une fonction et permettre a l'untilisateur de lui ajouter le nombre d'argument souhaite
+pour faire cela on procede comme suit:*/
+function calcul(...nombres){
+    for(let nb of nombres){
+        const sum =+ nb;
+    }
+    return sum;
+
+}

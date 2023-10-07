@@ -1,0 +1,108 @@
+
+//acceder au premier element specifie ici une div
+document.querySelector('div')
+/*acceder a toutes les div. 
+on va pouvoir utiliser la méthode forEach(). Cette méthode prend une fonction de rappel en argument et cette fonction de rappel peut prendre jusqu’à trois arguments optionnels qui représentent :
+
+    L’élément en cours de traitement dans la NodeList ;
+    L’index de l’élément en cours de traitement dans la NodeList ;
+    L’objet NodeList auquel forEach() est appliqué*/
+document.querySelectorAll('div')
+//acceder a un element avec son id
+document.getElementById('id')
+//acceder a un element grace a la valeur d'une classe par exemple ici une classe avec la valeur bleu. On peut manipuler les donnees avec la boucle for of
+document.getElementsByClassName('bleu')
+//permet de sélectionner des éléments en fonction de leur nom et renvoie un objet HTMLCollection 
+document.getElementsByTagName('p, div')
+/* Finalement, l’interface Document met également à notre disposition la méthode getElementsByName() qui renvoie un objet NodeList contenant la liste des éléments portant un attribut name avec la valeur spécifiée en argument sous forme d’objet.
+
+On va pouvoir utiliser cette méthode pour sélectionner des éléments de formulaire par exemple */ 
+document.getElementsByName('nom')
+
+/*
+Accéder directement à des éléments particuliers avec les propriétés de Document
+
+Finalement, l’interface Document fournit également des propriétés qui vont nous permettre d’accéder directement à certains éléments ou qui vont retourner des objets contenant des listes d’éléments.
+
+Les propriétés qui vont le plus nous intéresser ici sont les suivantes :
+
+    La propriété body qui retourne le nœud représentant l’élément body ;
+    La propriété head qui retourne le nœud représentant l’élément head ;
+    La propriété links qui retourne une liste de tous les éléments a ou area possédant un href avec une valeur ;
+    La propriété title qui retourne le titre (le contenu de l’élément title) du document ou permet de le redéfinir ;
+    La propriété url qui renvoie l’URL du document sous forme de chaine de caractères ;
+    La propriété scripts qui retourne une liste de tous les éléments script du document ;
+    La propriété cookie qui retourne la liste de tous les cookies associés au document sous forme de chaine de caractères ou qui permet de définir un nouveau cookie.
+
+
+*/
+// pour acceder a un noeud parent
+element.parentNode
+
+//pour acceder aux noeuds enfant
+element.childNodes
+
+//pour acceder aux balises sans gerer les noeuds textes et les commentaires il faut plutot utiliser
+element.children
+
+//Pour n’accéder au parent que dans le cas où celui-ci est un nœud Element, on utilisera plutôt la propriété parentElement de Node qui ne renvoie le parent d’un nœud que s’il s’agit d’un nœud Element ou null sinon
+element.parentElement
+
+//envoient respectivement le premier et le dernier nœud enfant direct d’un certain nœud ou null s’il n’en a pas. 
+element.firstChild
+element.lastChild
+
+//pour acceder aux balises sans gerer les noeuds textes et les commentaires il faut plutot utiliser
+element.firstElementChild
+element.lastElementChild
+
+//pour acceder au noeud suivant ou noeud precedent en ne tenant compte que des nœuds de même niveau
+element.previousSibling
+element.nextSibling
+//pour acceder aux balises sans gerer les noeuds textes et les commentaires il faut plutot utiliser
+element.previousElementSibling
+element.nextElementSibling
+
+//pour avoir les informations sur les noeuds
+element.nodeName
+element.NodeValue
+element.nodeType
+
+//pour creer un nouveau noeud element
+const p = document.createElement('p')
+
+//pour ajouter du texte a l'element
+p.textContent = 'textes';
+p.innerText = 'text';
+
+//on peut ajouter du texte en une ligne en creant directement un noeud text
+const p = document.createTextNode('textes');
+
+/* inserer des elements dans le DOM
+Nous pouvons déjà utiliser les méthodes prepend() et append() du mixin ParentNode. 
+Ces deux méthodes vont respectivement nous permettre d’insérer 
+un nœud ou du texte avant le premier enfant d’un certain nœud 
+ou après le dernier enfant de ce nœud
+*/
+element.prepend(p) //avant le premier enfant
+element.append(p) //après le dernier enfant
+
+/* DIFFERENCE ENTRE APPEND() ET APPENDCHILD()
+
+Les différences entre append() de ParentNode et appendChild() de Node sont les suivantes :
+
+    La méthode append() permet également d’ajouter directement une chaine de caractères 
+    tandis que appendChild() n’accepte que des objets de type Node ;
+
+    La méthode append() peut ajouter plusieurs nœuds et chaines de caractères 
+    au contraire de appendChild() qui ne peut ajouter qu’un nœud à la fois ;  
+b.append(newP, 'Texte inséré avec append()')
+b.appendChild(newP)
+
+    La méthode append() n’a pas de valeur de retour, tandis que appendChild() retourne l’objet ajouté
+    */
+
+//On peut encore utiliser la méthode insertBefore() de l’interface Node qui permet pour sa part d’insérer un nœud en tant qu’enfant d’un autre nœud juste avant un certain nœud enfant donné de ce parent.
+// 2 parametres: le noeud a inserer et ensuite le noeud avant lequel on veut etre
+parent.insertBefore(p,'li')
+la suite ici https://www.pierre-giraud.com/javascript-apprendre-coder-cours/dom-ajout-modification-suppression/

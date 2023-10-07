@@ -1,0 +1,4 @@
+le JSON(JavaScript Objects Notation) est un fichier qui formate des objets et autres il est independant de 
+tout langage.
+en JS: la methode stringify() permet de passer un element JS en JSON
+tandis que la methode parse() permet de convertir un fichier JSON en element JS

@@ -1,0 +1,10 @@
+/* capturer une erreur
+
+try{
+    essaie de faire cela si ca ne marche pas alors
+}catch(e){
+    capture l'erreur et ici grace a l'objet e on peur avoir toutes les informations sur l'erreur
+    e.name pour le nom de l'erreur
+    e.message pour le message de l'erreur
+    
+}
